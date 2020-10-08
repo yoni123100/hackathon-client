@@ -1,6 +1,7 @@
 .form {
     display: flex;
     margin: auto;
+    font-size: 1.5em;
     width: 75%;
     flex-wrap: wrap;
     justify-content: center;
@@ -32,5 +33,11 @@
 
     .form-submit{
         margin: auto;
+        width: 30%;
+        input {
+            width:100%;
+            cursor: pointer;
+            border-radius: 30px;
+        }
     }
 }
