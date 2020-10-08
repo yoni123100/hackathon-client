@@ -1,23 +1,27 @@
-import React, { Component, useState } from 'react';
+// import React, { Component } from 'react';
 
-class Posts extends Component {
+import React from 'react';
+import { connect } from 'react-redux';
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: [{name: "test"} ,{name: "test1"}, {name: "test2"}]
-        };
-    }
+const list = [{name: "test", date: "test", title: "test", description: "test"}];
 
-    render() { 
-        return (
-            <div className="container-posts">
-                <ul>
-                    {this.state.posts.map((post) => <li>{post.name}</li>)}
-                </ul>
-            </div>
-        );
-    }
-}
- 
-export default Posts;
+const Posts = ({ posts }) => (
+    <div>
+        { 
+        list.map((post, i) => (
+            <div className="container-post" key={i}>
+                <div>
+                    <span>{post.name} יוצר</span> 
+                    <span>{post.date} תאריך</span> 
+                    <span>{post.title} כותרת</span> 
+                    <span>{post.description}</span>
+                </div>
+             </div>))}
+    </div>);
+
+
+const mapStateToProps = state => ({posts: state.posts});
+
+const mapDispatchToProps = dispatch => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);

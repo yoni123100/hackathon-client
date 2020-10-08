@@ -1,6 +1,6 @@
 import React from 'react';
+import Posts from './components/posts/Posts'
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
 
 const Home = (props) => {
   return <div>hello world</div>
@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Route path="/" component={Home} />
+        <Route path="/posts" component={Posts} />
       </Router>
     </div>
   );
