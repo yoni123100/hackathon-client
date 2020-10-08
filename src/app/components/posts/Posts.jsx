@@ -1,9 +1,16 @@
 // import React, { Component } from 'react';
 
 import React from 'react';
+import { render } from 'react-dom';
 import { connect } from 'react-redux';
 
 const list = [{name: "test", date: "test", title: "test", description: "test"}];
+
+const renderItem = (itemName, hebrew) => (
+    <div id={itemName} className={"form-item " + itemName}>
+        <div>{hebrew}: </div>
+        <span>{itemName}</span>
+    </div>)
 
 const Posts = ({ posts }) => (
     <div>
@@ -11,10 +18,10 @@ const Posts = ({ posts }) => (
         list.map((post, i) => (
             <div className="container-post" key={i}>
                 <div>
-                    <span>{post.name} יוצר</span> 
-                    <span>{post.date} תאריך</span> 
-                    <span>{post.title} כותרת</span> 
-                    <span>{post.description}</span>
+                    {renderItem(post.title, "כותרת")}
+                    {renderItem(post.date, "תאריך")}
+                    {renderItem(post.name, "יוצר")}
+                    {renderItem(post.description, "הסיפור שלי")}
                 </div>
              </div>))}
     </div>);

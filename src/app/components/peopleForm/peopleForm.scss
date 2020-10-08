@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    margin: auto;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: center;
+    direction: rtl;
+
+    .form-item {
+        display: flex;
+        flex: 0 0 50%;
+        margin: auto;
+
+        div {
+            display: flex;
+        }
+        input {
+            margin-right: 1em;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        input:invalid {
+            border-color: red;
+        }
+        input:valid {
+            border-color: black;
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+
+    .form-submit{
+        margin: auto;
+    }
+}
