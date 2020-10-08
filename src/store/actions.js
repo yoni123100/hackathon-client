@@ -18,8 +18,6 @@ const postsA = [{
 
 //localhost:5000 /story - post
 export const loadPosts = () => (dispatch) => {
-    //get 
-    console.log(dispatch)
     Promise.resolve(postsA).then(posts => {
         dispatch({
             type: LOAD_POST,
