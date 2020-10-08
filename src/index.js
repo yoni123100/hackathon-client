@@ -1,9 +1,10 @@
 import React from 'react';
+import './index.css';
+import App from './app/App';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import ReactDOM from 'react-dom'
-import App from './app/App';
 import reducer from './store/index'
+import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
