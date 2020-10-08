@@ -1,12 +1,27 @@
-import { combineReducers } from 'redux'
-// import todos from './todos'
-// import visibilityFilter from './visibilityFilter'
+import {
+  LOAD_POST,
+  ADD_POST,
+  ADD_PERSON,
+  SEARCH_PERSON
+} from './actionsType'
 
+export const posts = (state = [], action) => {
+  switch (action.type) {
+    case LOAD_POST:
+      return action.posts
+    case ADD_POST:
+      return [ ...state, action.post ]
+    default:
+      return state
+  }
+}
 
-//localhost:5000 /story - post
-const todos = (state=[]) => { return state }
-
-export default combineReducers({
-  todos
-//   visibilityFilter
-})
+export const blacklist = (state = [], action) => {
+  switch (action.type) {
+    case SEARCH_PERSON:
+      return action.posts
+    case ADD_PERSON:
+    default:
+      return state
+  }
+}
