@@ -1,19 +1,17 @@
 import React from 'react';
-import Posts from './components/posts/Posts'
+import Posts from './components/posts/post.container'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import BlackList from './components/blackList/blacklist.container';
-// import './App.css';
-
 
 const Home = (props) => {
-  return <div>hello world</div>
+  return <div>landing page</div>
 }
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/posts" component={Posts} />
         <Route path="/b" component={BlackList} />
       </Router>

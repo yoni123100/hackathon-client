@@ -6,6 +6,7 @@ import {
 } from './actionsType'
 
 export const posts = (state = [], action) => {
+  console.log(action);
   switch (action.type) {
     case LOAD_POST:
       return action.posts

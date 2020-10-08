@@ -1,1 +1,48 @@
+.posts {
+    width: 80%;
+    background: #0134a5ad;
+    margin: 1em auto;
+    direction: rtl;
+    padding: 0.5em;
+    border-radius: 10px;
 
+    .container-post {
+        width: 90%;
+        background: #0134a5ad;
+        border-radius: 10px;
+        margin: auto;
+        padding: 0.5em;
+
+        .header {
+            background-color: #839fdead;
+            border-radius: 10px;
+            width: 98%;
+            margin: auto;
+
+            .title {
+                font-size: 1.5em;
+            }
+            .same-line {
+                display: flex;
+            }
+        }
+
+        .content {
+            background-color: #839fdead;
+            border-radius: 10px;
+            width: 98%;
+            margin: auto;
+            margin-top: 0.5em;
+        }
+    }
+
+    .post-item {
+        width: 98%;
+        margin: auto;
+        display: flex;
+
+        .key {
+            margin-left: 0.3em;
+        }
+    }
+}
